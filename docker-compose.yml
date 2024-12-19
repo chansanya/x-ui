@@ -1,0 +1,13 @@
+
+services:
+  xui:
+    #image: enwaiax/x-ui
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: x-ui
+    volumes:
+      - $PWD/db/:/etc/x-ui/
+      - $PWD/cert/:/root/cert/
+    restart: unless-stopped
+    network_mode: host
