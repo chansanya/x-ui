@@ -1,7 +1,6 @@
 
 services:
   xui:
-    #image: enwaiax/x-ui
     build:
       context: ./
       dockerfile: Dockerfile
